@@ -30,7 +30,7 @@ a {
 
 
 .home-bg-img{
-  background-image: url(C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\bgimg1.webp);
+  background-image: url(./deploy_files1/bgimg1.webp);
   height: 100vh;
   width: 100vw;
   padding-top: 72px; 
@@ -312,7 +312,7 @@ a {
   height: 1100px; /* Set the div's height to 130vh */
   background-image: 
     linear-gradient(to right, #FBFBF0 35%, transparent 65%), /* Left color and right transparent for split */
-    url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\fullremodelimg6.webp'); /* Right background image */
+    url('./deploy_files1/fullremodelimg6.webp'); /* Right background image */
   background-size: 100% 100%, cover; /* Color layer covers full div; image scales to cover */
   background-position: left, right; /* Position color on left, image on right */
   background-repeat: no-repeat;
@@ -636,53 +636,53 @@ a {
 }
 /* Full Remodel Images */
 .frimg1 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\fullremodelimg1.webp');
+  background-image: url('./deploy_files1/fullremodelimg1.webp');
 }
 .frimg2 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\fullremodelimg2.webp');
+  background-image: url('./deploy_files1fullremodelimg2.webp');
 }
 .frimg3 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\fullremodelimg3.webp');
+  background-image: url('./deploy_files1fullremodelimg3.webp');
 }
 .frimg4 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\fullremodelimg4.webp');
+  background-image: url('./deploy_files1fullremodelimg4.webp');
 }
 .frimg5 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\fullremodelimg5.webp');
+  background-image: url('./deploy_files1fullremodelimg5.webp');
 }
 
 /* Bathroom Images */
 .bimg1 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\bathroomimg1.webp');
+  background-image: url('./deploy_files1/bathroomimg1.webp');
 }
 .bimg2 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\bathroomimg2.webp');
+  background-image: url('./deploy_files1/bathroomimg2.webp');
 }
 .bimg3 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\bathroomimg3.webp');
+  background-image: url('./deploy_files1/bathroomimg3.webp');
 }
 .bimg4 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\bathroomimg5 (1).webp');
+  background-image: url('./deploy_files1/bathroomimg4.webp');
 }
 .bimg5 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\bathroomimg6.webp');
+  background-image: url('./deploy_files1/bathroomimg5.webp');
 }
 
 /* Kitchen Images */
 .kimg1 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\kitchenimg1.webp');
+  background-image: url('./deploy_files1/kitchenimg1.webp');
 }
 .kimg2 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\kitchenimg2.webp');
+  background-image: url('./deploy_files1/kitchenimg2.webp');
 }
 .kimg3 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\kitchenimg3.webp');
+  background-image: url('./deploy_files1/kitchenimg3.webp');
 }
 .kimg4 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\kitchenimg4.webp');
+  background-image: url('./deploy_files1/kitchenimg4.webp');
 }
 .kimg5 {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\kitchenimg5.webp');
+  background-image: url('./deploy_files1/kitchenimg5.webp');
 }
 
 
@@ -972,7 +972,7 @@ a {
 
 
 .background-container {
-  background-image: url('C:\Users\dadha\OneDrive\Desktop\deploy_files\deploy_files1\formbg.webp'); /* Replace with your background image path */
+  background-image: url('./deploy_files1/formbg.webp'); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
