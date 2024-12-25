@@ -2,64 +2,66 @@
 
 
 
-
+// Existing JS for large screens
 document.addEventListener('DOMContentLoaded', () => {
   const faqAccordions = document.querySelectorAll('.faq1');
   const faqImages = document.querySelectorAll('.faqimage img');
 
   // Display the first image by default
   if (faqImages[0]) {
-    faqImages[0].classList.add('visible');
+      faqImages[0].classList.add('visible');
   }
 
   faqAccordions.forEach((faqque, index) => {
-    const questionWrapper = faqque.querySelector('.faqques');
-    const answerWrapper = faqque.querySelector('.faqans');
-    const plusIcon = faqque.querySelector(".plus-icon");
+      const questionWrapper = faqque.querySelector('.faqques');
+      const answerWrapper = faqque.querySelector('.faqans');
+      const plusIcon = faqque.querySelector(".plus-icon");
 
-    questionWrapper.addEventListener('click', () => {
-      // Close all other FAQs and hide all images
-      faqAccordions.forEach((otherFaq, otherIndex) => {
-        if (otherFaq !== faqque) {
-          otherFaq.classList.remove('active'); // Remove active class from other faq1
-          otherFaq.querySelector('.faqans').classList.remove('active');
-          otherFaq.querySelector('.plus-icon').classList.remove('minus-icon');
+      questionWrapper.addEventListener('click', () => {
+          // Close all other FAQs and hide all images
+          faqAccordions.forEach((otherFaq, otherIndex) => {
+              if (otherFaq !== faqque) {
+                  otherFaq.classList.remove('active'); // Remove active class from other faq1
+                  otherFaq.querySelector('.faqans').classList.remove('active');
+                  otherFaq.querySelector('.plus-icon').classList.remove('minus-icon');
 
-          if (faqImages[otherIndex]) {
-            faqImages[otherIndex].classList.remove('visible'); // Remove visible class
+                  if (faqImages[otherIndex]) {
+                      faqImages[otherIndex].classList.remove('visible'); // Remove visible class
+                  }
+              }
+          });
+
+          // Toggle the selected FAQ's active state
+          const isActive = faqque.classList.contains('active');
+          faqque.classList.toggle('active', !isActive);
+          answerWrapper.classList.toggle('active', !isActive);
+          plusIcon.classList.toggle('minus-icon', !isActive);
+
+          // Show the corresponding image if it exists
+          if (faqImages[index]) {
+              if (!isActive) {
+                  faqImages[index].classList.add('visible'); // Add visible class
+              } else {
+                  faqImages[index].classList.remove('visible'); // Remove visible class
+              }
           }
-        }
+
+          // Check if any image is visible; if not, display the first image by default
+          const anyImageVisible = Array.from(faqImages).some(img => img.classList.contains('visible'));
+          if (!anyImageVisible && faqImages[0]) {
+              faqImages[0].classList.add('visible');
+          }
       });
-
-      // Toggle the selected FAQ's active state
-      const isActive = faqque.classList.contains('active');
-      faqque.classList.toggle('active', !isActive);
-      answerWrapper.classList.toggle('active', !isActive);
-      plusIcon.classList.toggle('minus-icon', !isActive);
-
-      // Show the corresponding image if it exists
-      if (faqImages[index]) {
-        if (!isActive) {
-          faqImages[index].classList.add('visible'); // Add visible class
-        } else {
-          faqImages[index].classList.remove('visible'); // Remove visible class
-        }
-      }
-
-      // Check if any image is visible; if not, display the first image by default
-      const anyImageVisible = Array.from(faqImages).some(img => img.classList.contains('visible'));
-      if (!anyImageVisible && faqImages[0]) {
-        faqImages[0].classList.add('visible');
-      }
-    });
   });
 });
 
+// No additional JS required for the small screen layout
 
 
 
 
-// // Select all containers with class 'container1'
+
+// Select all containers with class 'container1'
 let containers = document.querySelectorAll('.container1');
 
 containers.forEach(container => {
@@ -69,13 +71,27 @@ containers.forEach(container => {
     let slide = container.querySelector('.slide');
 
     if (next && prev && slide) {
+        // Function to get the appropriate width based on screen size
+        const getWidth = () => {
+            if (window.matchMedia('(max-width: 576px)').matches) {
+                return 67; // 52vw for small screens
+            } else if (window.matchMedia('(max-width: 768px)').matches) {
+                return 52; // 42vw for medium screens (up to 768px)
+            } else if (window.matchMedia('(max-width: 992px)').matches) {
+                return 37; // 37vw for medium screens (up to 992px)
+            } else {
+                return 28; // 28vw for larger screens
+            }
+        };
+
         // Function to update the positions of items
         const updatePositions = () => {
             let items = slide.querySelectorAll('.itemc');
+            let width = getWidth(); // Get the width dynamically
             items.forEach((item, index) => {
                 // Calculate the position dynamically
-                item.style.left = `${index * 28}vw`;
-                item.style.opacity = index < 2 ? '1' : '0'; // Show only the first 5 items
+                item.style.left = `${index * width}vw`;
+                item.style.opacity = index < 2 ? '1' : '0'; // Show only the first 2 items
             });
         };
 
@@ -103,8 +119,12 @@ containers.forEach(container => {
                 updatePositions();
             }
         });
+
+        // Update positions dynamically on window resize
+        window.addEventListener('resize', updatePositions);
     }
 });
+
 
 
 
@@ -235,24 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.slider-item');
-
-  const handleScroll = () => {
-      const triggerPoint = window.innerHeight / 1.5; // Adjust based on when you want animation
-      items.forEach((item) => {
-          const itemTop = item.getBoundingClientRect().top;
-          if (itemTop < triggerPoint) {
-              item.classList.add('active');
-          } else {
-              item.classList.remove('active');
-          }
-      });
-  };
-
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Trigger on load in case of initial visible items
-});
 
 
 
@@ -336,8 +338,53 @@ document.addEventListener('DOMContentLoaded', () => {
       hasAnimated = true; // Ensure the animation runs only once
     }
   }, {
-    threshold: 0.5 // Trigger when 50% of the section is in view
+    threshold: 0.1 // Trigger when 50% of the section is in view
   });
 
   observer.observe(section);
 });
+
+
+
+
+
+
+
+const animatableElements = document.querySelectorAll(".animatable");
+
+window.addEventListener("scroll", function() {
+  const offset = window.innerHeight * 0.2; // Calculate 20% of the viewport height
+  
+  animatableElements.forEach(function(element) {
+    const rect = element.getBoundingClientRect();
+    
+    // Check if the element is within 20% from the top or bottom of the viewport
+    if (rect.top < window.innerHeight - offset && rect.bottom > offset) {
+      element.classList.add("animate");
+    }
+  });
+});
+
+
+
+const animatableElements1 = document.querySelectorAll(".animatable1");
+
+// Function to check and add the class
+function animateElements() {
+  animatableElements1.forEach(function(element) {
+    const rect1 = element.getBoundingClientRect();
+    
+    // Check if the element is partially visible in the viewport
+    if (rect1.top < window.innerHeight && rect1.bottom > 0) {
+      element.classList.add("animate1");
+    }
+  });
+}
+
+// Run the function on page load
+document.addEventListener("DOMContentLoaded", animateElements);
+
+// Run the function on scroll
+window.addEventListener("scroll", animateElements);
+
+
