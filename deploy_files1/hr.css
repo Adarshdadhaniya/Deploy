@@ -1068,10 +1068,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .faq-group img {
-    width: 100%;
+    width: 75vw;
     height: auto;
     max-width: 250px;
     margin-bottom: 15px; /* Spacing between the image and text */
@@ -1079,16 +1080,18 @@ a {
   }
 
   .faq-group .faqquescont {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 500;
     margin-bottom: 10px; /* Added space below question */
+    white-space: nowrap;
   }
 
   .faq-group .faqans {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #4a4a4a;
     line-height: 1.4;
     text-align: justify;
+    
   }
 }
 @media (max-width: 480px){
