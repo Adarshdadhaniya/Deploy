@@ -20,6 +20,8 @@ if(navClose){
 
 // Function to apply the styles when the page loads
 function applyStylesOnPageLoad() {
+    console.log(scrollPosition);
+    console.log(triggerHeight);
     const navbar = document.querySelector('.header');
     const white = document.querySelector('.whitelogo');
     const black = document.querySelector('.blacklogo');
@@ -55,7 +57,8 @@ function applyStylesOnPageLoad() {
     const navbar = document.querySelector('.header');
     const scrollPosition = window.scrollY;
     const triggerHeight = window.innerHeight * 0.0001; // Adjust this as needed
-    
+    console.log(scrollPosition);
+    console.log(triggerHeight);
     const white = document.querySelector('.whitelogo');
     const black = document.querySelector('.blacklogo');
     
