@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(counter => {
       const target = +counter.getAttribute('data-number'); // Get the target number
       let current = 0;
-      const increment = target / 100; // Adjust this value to change the speed
+      const increment = target / 40; // Adjust this value to change the speed
 
       const updateCounter = () => {
         current += increment;
