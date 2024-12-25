@@ -419,53 +419,53 @@ a {
 }
 /* Full Remodel Images */
 .frimg1 {
-  background-image: url('deploy_files1fullremodelimg1.webp');
+  background-image: url('fullremodelimg1.webp');
 }
 .frimg2 {
-  background-image: url('deploy_files1fullremodelimg2.webp');
+  background-image: url('fullremodelimg2.webp');
 }
 .frimg3 {
-  background-image: url('deploy_files1fullremodelimg3.webp');
+  background-image: url('fullremodelimg3.webp');
 }
 .frimg4 {
-  background-image: url('deploy_files1fullremodelimg4.webp');
+  background-image: url('fullremodelimg4.webp');
 }
 .frimg5 {
-  background-image: url('deploy_files1fullremodelimg5.webp');
+  background-image: url('fullremodelimg5.webp');
 }
 
 /* Bathroom Images */
 .bimg1 {
-  background-image: url('deploy_files1bathroomimg1.webp');
+  background-image: url('bathroomimg1.webp');
 }
 .bimg2 {
-  background-image: url('deploy_files1bathroomimg2.webp');
+  background-image: url('bathroomimg2.webp');
 }
 .bimg3 {
-  background-image: url('deploy_files1bathroomimg3.webp');
+  background-image: url('bathroomimg3.webp');
 }
 .bimg4 {
-  background-image: url('deploy_files1bathroomimg4.webp');
+  background-image: url('bathroomimg4.webp');
 }
 .bimg5 {
-  background-image: url('deploy_files1bathroomimg5.webp');
+  background-image: url('bathroomimg5.webp');
 }
 
 /* Kitchen Images */
 .kimg1 {
-  background-image: url('deploy_files1kitchenimg1.webp');
+  background-image: url('kitchenimg1.webp');
 }
 .kimg2 {
-  background-image: url('deploy_files1kitchenimg2.webp');
+  background-image: url('kitchenimg2.webp');
 }
 .kimg3 {
-  background-image: url('deploy_files1kitchenimg3.webp');
+  background-image: url('kitchenimg3.webp');
 }
 .kimg4 {
-  background-image: url('deploy_files1kitchenimg4.webp');
+  background-image: url('kitchenimg4.webp');
 }
 .kimg5 {
-  background-image: url('deploy_files1kitchenimg5.webp');
+  background-image: url('kitchenimg5.webp');
 }
 
 
@@ -1118,7 +1118,7 @@ a {
   height: 1100px; /* Set the div's height to 130vh */
   background-image: 
     linear-gradient(to right, #FBFBF0 35%, transparent 65%), /* Left color and right transparent for split */
-    url('deploy_files1fullremodelimg6.webp'); /* Right background image */
+    url('fullremodelimg6.webp'); /* Right background image */
   background-size: 100% 100%, cover; /* Color layer covers full div; image scales to cover */
   background-position: left, right; /* Position color on left, image on right */
   background-repeat: no-repeat;
@@ -1621,7 +1621,7 @@ a {
 
 
 .background-container {
-  background-image: url('deploy_files1formbg.webp'); /* Replace with your background image path */
+  background-image: url('formbg.webp'); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
