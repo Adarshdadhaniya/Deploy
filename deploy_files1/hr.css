@@ -1430,7 +1430,7 @@ a {
 .slider-heading {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 7vh;
   font-weight: 300;
 }
 
@@ -1445,7 +1445,7 @@ a {
   align-items: center;
   gap: 1rem;
   opacity: 0.5;
-  transform: translateY(50px);
+  
   transition: all 0.5s ease-in-out;
 }
 
