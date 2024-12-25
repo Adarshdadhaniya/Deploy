@@ -522,7 +522,7 @@ a:active {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 20px;
+  padding: 18px;
   background: #F9DFBC;
   border-radius: 0.75em;
   
@@ -1054,7 +1054,7 @@ a:active {
 }
 
 /* Styles for Small Screens */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .faqans {
     transform: none;
     opacity: 1;
@@ -1208,7 +1208,7 @@ a:active {
   
   top: 145px !important;
   position: absolute;
-  right: 0px !important;
+  right: 5px !important;
   z-index: 10;
   
 
@@ -1231,7 +1231,7 @@ a:active {
   border-radius: 50%;
   background-color: #ccc;
   border: 0.8px solid black;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 .next i{
   color: black;
